@@ -1,0 +1,16 @@
+<h3>without trackBy</h3>
+<button (click)="loadCourses()">Load Courses</button>&nbsp;
+<button (click)="addCource()">Add course</button>
+<ul>
+  <li *ngFor="let course of courses">
+    {{ course.name }}
+  </li>
+</ul>
+<h3>without trackBy</h3>
+<button (click)="loadFrameworks()">Load technologies</button>&nbsp;
+<button (click)="addFramework()">Add course</button>
+<ul>
+  <li *ngFor="let course of frameworks;trackBy : trackByFramwork">
+    {{ course.name }}
+  </li>
+</ul>
